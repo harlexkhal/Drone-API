@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "6aba2c8f-a92c-4d5f-8714-0f5728a07f84",
+		"name": "Musala Soft Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register Drone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"model\": 0,\r\n    \"weight\": 100,\r\n    \"battery\": 50,\r\n    \"state\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/drone/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"drone",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch All Drones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/drone/fetch-all-drones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"drone",
+						"fetch-all-drones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Medical Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"droneserialnumber\": 3,\r\n    \"weight\": 5,\r\n    \"code\": 8080,\r\n    \"imageurl\": \"#\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/drone/add-medical-item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"drone",
+						"add-medical-item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Medical Items In Drone",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"droneserialnumber\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/drone/fetch-medical-items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"drone",
+						"fetch-medical-items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Drone Battery Percentage",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"droneserialnumber\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/drone/fetch-battery-percent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"drone",
+						"fetch-battery-percent"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
